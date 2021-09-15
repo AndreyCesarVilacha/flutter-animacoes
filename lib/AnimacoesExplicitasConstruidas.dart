@@ -16,12 +16,15 @@ class _AnimacoesExplicitasConstruidasState
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 5))..repeat()..addStatusListener((status) {
-          _animationStatus = status;
-        });
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 5),
+    )
+      ..repeat()
+      ..addStatusListener((status) {
+        _animationStatus = status;
+      });
   }
 
   @override
@@ -47,10 +50,10 @@ class _AnimacoesExplicitasConstruidasState
           ),
           ElevatedButton(
             onPressed: () {
-              if(_animationStatus == AnimationStatus.dismissed){
+              if (_animationStatus == AnimationStatus.dismissed) {
                 //_animationController.forward();
                 _animationController.repeat();
-              }else{
+              } else {
                 _animationController.reverse();
               }
               /*
