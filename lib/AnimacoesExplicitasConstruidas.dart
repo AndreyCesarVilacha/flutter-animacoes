@@ -26,7 +26,7 @@ class _AnimacoesExplicitasConstruidasState
 
   @override
   void dispose() {
-    _animationController!.dispose();
+    _animationController.dispose();
     super.dispose();
   }
 
